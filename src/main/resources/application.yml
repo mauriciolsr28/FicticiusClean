@@ -1,0 +1,15 @@
+spring:
+  profiles.active: local
+  application:
+    name: ficticius-clean
+
+  jpa:
+    hibernate.ddl-auto: none
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:15432/ficticius_clean
+    username: ficticius_clean_adm
+    password: ficticius@dmin
+    driver-class-name: org.postgresql.Driver
+
+server.port: 8081
