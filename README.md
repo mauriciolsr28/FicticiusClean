@@ -78,7 +78,7 @@ Criar uma tabela
 
 
 ****Em anexo no projeto segue o import para testar atraves do postman*****
-
+Ficticius Clean.postman_collection.json
 
 ### Tecnologias
 
