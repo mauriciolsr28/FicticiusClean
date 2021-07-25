@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  postgres-ficticius:
+    image: postgres
+    environment:
+      POSTGRES_USER: "ficticius_clean_adm"
+      POSTGRES_PASSWORD: "ficticius@dmin"
+      POSTGRES_DB: "ficticius_clean"
+    ports:
+      - "15432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - network-ficticius
+
+  pgadmin-ficticius:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "ficticius@mock.com"
+      PGADMIN_DEFAULT_PASSWORD: "ficticius@dmin"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres-ficticius
+    networks:
+      - network-ficticius
+
+networks:
+  network-ficticius:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
