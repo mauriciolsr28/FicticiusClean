@@ -86,6 +86,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 	-Java 11
 	-SpringBoot
+	-Spring JPA
+	-Spring Web
 	-PostgreSQL
 	-Docker
 	
