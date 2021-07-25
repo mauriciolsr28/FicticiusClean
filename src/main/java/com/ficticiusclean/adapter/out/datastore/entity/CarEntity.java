@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class CarEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "name")
@@ -28,12 +28,12 @@ public class CarEntity {
     @Column(name = "model")
     private String model;
 
-    @Column(name = "manufacturing_data")
-    private LocalDateTime manufacturingData;
+    @Column(name = "manufacturing_date")
+    private String manufacturingDate;
 
     @Column(name = "city_consumption")
-    private String cityConsumption;
+    private Double cityConsumption;
 
     @Column(name = "highway_consumption")
-    private String highwayConsumption;
+    private Double highwayConsumption;
 }
